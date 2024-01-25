@@ -60,7 +60,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayMainView() {
-        viewHeader();
+    	printNewHeader();
         showSpendings();
         viewFooter();
     }
@@ -100,6 +100,7 @@ public class DisplayExpenseTracker {
             }
         }
     }
+    
 
     public static void displayTransactionCreateView() {
         viewHeader();
@@ -524,4 +525,41 @@ public class DisplayExpenseTracker {
     public static void clearConsole() {
         System.out.print("\033c");
     }
+    
+    public static void printNewHeader() {
+        int width = 90;
+        int totalHeight = 3;  // Adjust the total height as needed
+        String text = "F I N A N C I A L    T R A C K E R";
+
+        // Ensure an odd total height for a clear center row
+        int height = totalHeight % 2 == 0 ? totalHeight + 1 : totalHeight;
+
+        // Nested loops to print the rectangle with text in the middle
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+                    // Print '-' for the border
+                    System.out.print("\033[" + Constants.COLOR_RED + "m-\033[0m");
+                } else if (i == height / 2) {
+                    // Print the text in the middle row
+                    int textStart = (width - text.length()) / 2;
+                    int textEnd = textStart + text.length();
+                    if (j >= textStart && j < textEnd) {
+                        System.out.print("\033[" + Constants.COLOR_YELLOW + "m"+ text.charAt(j - textStart)+"\033[0m");
+                    } else {
+                        System.out.print(" ");
+                    }
+                } else {
+                    // Print space for the middle
+                    System.out.print(" ");
+                }
+            }
+            System.out.println(); // Move to the next line after printing each row
+        }
+        printNewLine();
+        printCurrentMonthName();
+        printNewLine();
+    }
+    
+    
 }
