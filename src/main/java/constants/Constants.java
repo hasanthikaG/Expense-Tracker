@@ -1,4 +1,4 @@
-package org.example.constants;
+package constants;
 
 final public class Constants {
     public static final String COLOR_BLACK = "30";
