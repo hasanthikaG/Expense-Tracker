@@ -259,7 +259,7 @@ public class DisplayExpenseTracker {
                                     : ("\033[" + outlineColor + "m\t\t-\033[0m"))));
             }
             System.out.println(String.format("%-35s %s", "\t\033[" + Constants.COLOR_PURPLE + "mTotal Expenses\033[0m",
-                    "\t    \033[" + outlineColor + "m=\033[0m " + "\033[" + Constants.COLOR_WHITE + "m "
+                    "\t        \033[" + outlineColor + "m=\033[0m " + "\033[" + Constants.COLOR_WHITE + "m "
                             + totalExpenseAmount + "\033[0m   "));
             System.out.println("\t\033[" + Constants.COLOR_BLUE + "mIncome\033[0m");
             for (DtoMonthlySummaryData data : result) {
@@ -269,16 +269,16 @@ public class DisplayExpenseTracker {
                                     " \033[" + outlineColor + "m|\033[0m  " + data.totalAmount));
             }
             System.out.println(String.format("%-35s %s", "\t\033[" + Constants.COLOR_PURPLE + "mTotal Income\033[0m",
-                    "\t    \033[" + outlineColor + "m=\033[0m " + "\033[" + Constants.COLOR_WHITE + "m "
+                    "\t        \033[" + outlineColor + "m=\033[0m " + "\033[" + Constants.COLOR_WHITE + "m "
                             + totalIncomeAmount + "\033[0m  "));
 
             System.out.println("\033[" + outlineColor + "m"
                     + "\t.....................................................................................\033[0m");
             System.out.println(String.format("%-35s %s", "\t\033[" + Constants.COLOR_BLUE + "mMonthly Budget\033[0m",
-                    "\033[" + Constants.COLOR_PURPLE + "m\t    \033[" + outlineColor + "m|\033[0m "+"\033[" + Constants.COLOR_PURPLE + "m "
+                    "\033[" + Constants.COLOR_PURPLE + "m\t        \033[" + outlineColor + "m|\033[0m "+"\033[" + Constants.COLOR_PURPLE + "m "
                             + currentMonthBudget + "\033[0m  "));
             System.out.println(String.format("%-35s %s", "\t\033[" + Constants.COLOR_BLUE + "mRemaining\033[0m",
-                    "\033[" + Constants.COLOR_PURPLE + "m\t    \033[" + outlineColor + "m|\033[0m "+"\033[" + Constants.COLOR_PURPLE + "m "
+                    "\033[" + Constants.COLOR_PURPLE + "m\t        \033[" + outlineColor + "m|\033[0m "+"\033[" + Constants.COLOR_PURPLE + "m "
                             + (currentMonthBudget - totalExpenseAmount)
                             + "\033[0m  "));
         } else {
