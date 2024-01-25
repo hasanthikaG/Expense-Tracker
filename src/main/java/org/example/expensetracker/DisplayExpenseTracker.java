@@ -103,7 +103,7 @@ public class DisplayExpenseTracker {
     
 
     public static void displayTransactionCreateView() {
-        viewHeader();
+//        printNewHeader();
         Scanner scanner = new Scanner(System.in);
         List<Category> categoryList = new ArrayList<Category>();
         System.out.print("\tEnter Transaction Type: ");
@@ -207,7 +207,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayCategoryListView() {
-        viewHeader();
+//        printNewHeader();
         System.out.println("\t\033[" + Constants.COLOR_BLUE + "mCategory List :\n\033[0m");
         for (Category categories : tracker.getCategories()) {
             System.out.println("\t   " + categories.getName());
@@ -216,7 +216,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayCategoryCreateView(boolean isIncomeCategory) {
-        viewHeader();
+//        printNewHeader();
         Scanner scanner = new Scanner(System.in);
         System.out.print("\tEnter Category Name : ");
         String name = scanner.nextLine();
@@ -287,7 +287,7 @@ public class DisplayExpenseTracker {
     public static void viewTransactionsListTable() {
         List<Transaction> tList = tracker.getTransactionsForMonth(currentMonthName);
         tList.sort((a, b) -> a.getType().compareTo(b.getType()));
-        viewHeader();
+//        printNewHeader();
         System.out.println("\033[" + Constants.COLOR_BLUE + "m\tTransaction List : \033[0m\n");
         System.out.println(
                 String.format("%-60s %s", "\t   " + "ID   " + "\033[" + outlineColor + "m|\033[0m Note",
@@ -348,7 +348,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayBudgetListView() {
-        viewHeader();
+//        printNewHeader();
         System.out.println("\t\033[" + Constants.COLOR_BLUE + "mMonthly Budget List :\n\033[0m");
         for (Month month : tracker.getMonths()) {
             System.out.println(String.format("%-35s %s", "\t   " + month.getName(), month.getBudget()));
@@ -362,7 +362,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayBudgetCreateView() {
-        viewHeader();
+//        printNewHeader();
         Scanner scanner = new Scanner(System.in);
         List<Category> categoryList = new ArrayList<Category>();
         List<Month> monthList = new ArrayList<Month>();
@@ -412,14 +412,6 @@ public class DisplayExpenseTracker {
         scanner.close();
     }
 
-    public static void viewHeader() {
-        printDoubleLine();
-        printExpenseTrackerTitle();
-        printDottedLine();
-        printNewLine();
-        printCurrentMonthName();
-        printNewLine();
-    }
 
     public static void viewFooter() {
         printNewLine();
@@ -528,8 +520,8 @@ public class DisplayExpenseTracker {
     
     public static void printNewHeader() {
         int width = 90;
-        int totalHeight = 3;  // Adjust the total height as needed
-        String text = "F I N A N C I A L    T R A C K E R";
+        int totalHeight = 3;
+        String text = "F I N A N C I A L    T R A C K E R.....";
 
         // Ensure an odd total height for a clear center row
         int height = totalHeight % 2 == 0 ? totalHeight + 1 : totalHeight;
