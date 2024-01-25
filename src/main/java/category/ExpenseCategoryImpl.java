@@ -1,4 +1,4 @@
-package org.example.category;
+package category;
 
 import types.TransactionType;
 

@@ -1,13 +1,13 @@
-package org.example.transaction;
+package transaction;
+
+import category.Category;
+import date.Date;
+import types.TransactionType;
 
 import java.util.UUID;
 
-import org.example.category.Category;
-import org.example.date.Date;
-import org.example.types.TransactionType;
-
 public class Transaction {
-    
+
     private String id;
     private double amount;
     private Category category;
@@ -15,7 +15,7 @@ public class Transaction {
     private Date date;
     private boolean isRecurring = false;
     private boolean isActive = true;
-    
+
     public Transaction(double amount, Category category, String note, Date date, boolean isRecurring) {
         this.id = UUID.randomUUID().toString().substring(0, 4);
         this.amount = amount;
@@ -24,7 +24,6 @@ public class Transaction {
         this.date = date;
     }
 
-    // getters and setters
     public boolean isRecurring() {
         return isRecurring;
     }
@@ -49,7 +48,7 @@ public class Transaction {
     }
 
     public TransactionType getType() {
-        return this.category.getType()
+        return this.category.getType();
     }
 
     public Category getCategory() {
@@ -94,5 +93,6 @@ public class Transaction {
 
     public void setActive(boolean active) {
         isActive = active;
- 
+
+    }
 }

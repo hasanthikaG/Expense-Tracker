@@ -1,4 +1,4 @@
-package org.example.date;
+package date;
 
 public class Date {
     private int day;
