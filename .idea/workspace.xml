@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8026ad9b-a2f5-4318-8736-c663d4e3e5ce" name="Changes" comment="workspace.xml added">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/expenseTracker/DisplayExpenseTracker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/expenseTracker/ExpenseTracker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/expenseTracker/ExpenseTrackerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/expenseTracker/ExpenseTrackerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/month/Month.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExpenseTrackerTest.java" afterDir="false" />
+    <list default="true" id="8026ad9b-a2f5-4318-8736-c663d4e3e5ce" name="Changes" comment="Financial tracker implementation&#10;1. Display Transactions&#10;2. Display Categories&#10;3. Display Budgets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/category/CategoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/category/CategoryFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/category/ExpenseCategoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/category/ExpenseCategoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/category/IncomeCategoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/category/IncomeCategoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/date/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/date/Date.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transaction/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/types/TransactionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/types/TransactionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/expenseTracker/DisplayExpenseTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/expenseTracker/DisplayExpenseTracker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +56,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -120,11 +105,24 @@
       <workItem from="1705889443364" duration="4451000" />
       <workItem from="1705973901741" duration="13796000" />
       <workItem from="1706109718997" duration="242000" />
-      <workItem from="1706151538656" duration="11255000" />
+      <workItem from="1706151538656" duration="12212000" />
     </task>
+    <task id="LOCAL-00001" summary="Financial tracker implementation&#10;1. Display Transactions&#10;2. Display Categories&#10;3. Display Budgets">
+      <option name="closed" value="true" />
+      <created>1706169828339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706169828339</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Financial tracker implementation&#10;1. Display Transactions&#10;2. Display Categories&#10;3. Display Budgets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Financial tracker implementation&#10;1. Display Transactions&#10;2. Display Categories&#10;3. Display Budgets" />
   </component>
 </project>

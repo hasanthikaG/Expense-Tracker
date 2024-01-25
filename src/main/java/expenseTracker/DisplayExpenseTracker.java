@@ -66,7 +66,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayMainView() {
-        printNewHeader();
+        viewHeader();
         showSpendings();
         viewFooter();
     }
@@ -108,8 +108,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayTransactionCreateView() {
-//        viewHeader();
-        printNewHeader();
+        viewHeader();
         Scanner scanner = new Scanner(System.in);
         List<Category> categoryList = new ArrayList<Category>();
         System.out.print("\tEnter Transaction Type: ");
@@ -210,7 +209,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayCategoryListView() {
-        printNewHeader();
+        viewHeader();
         System.out.println("\033[" + Constants.COLOR_BLUE + "m\t                        CATEGORY LIST \033[0m\n");
         for (int i = 0; i < tracker.getCategories().size(); i++) {
             Category category = tracker.getCategories().get(i);
@@ -220,7 +219,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayCategoryCreateView(boolean isIncomeCategory) {
-        printNewHeader();
+        viewHeader();
         Scanner scanner = new Scanner(System.in);
         System.out.print("\tAdd New Category: ");
         String name = scanner.nextLine();
@@ -295,7 +294,7 @@ public class DisplayExpenseTracker {
     public static void viewTransactionsListTable() {
         List<Transaction> tList = tracker.getTransactionsForMonth(currentMonthName);
         tList.sort((a, b) -> a.getType().compareTo(b.getType()));
-        printNewHeader();
+        viewHeader();
         System.out.println("\033[" + Constants.COLOR_BLUE + "m\t                        TRANSACTION LIST \033[0m\n");
         System.out.println(
                 String.format("%-60s %s", "\t   " + "Transaction Id   " + "\033[" + outlineColor + "m|\033[0m Transaction",
@@ -356,7 +355,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayBudgetListView() {
-        printNewHeader();
+        viewHeader();
         System.out.println("\t                          \033[" + Constants.COLOR_BLUE + "mMONTHLY BUDGET LIST\n\033[0m");
         for(int i=0; i < tracker.getMonths().size(); i++) {
             Month month = tracker.getMonths().get(i);
@@ -372,7 +371,7 @@ public class DisplayExpenseTracker {
     }
 
     public static void displayBudgetCreateView() {
-        printNewHeader();
+        viewHeader();
         Scanner scanner = new Scanner(System.in);
         List<Category> categoryList = new ArrayList<Category>();
         List<Month> monthList = new ArrayList<Month>();
@@ -553,39 +552,7 @@ public class DisplayExpenseTracker {
         System.out.print("\033c");
     }
 
-    public static void printNewHeader() {
-        int width = 90;
-        int totalHeight = 3;  // Adjust the total height as needed
-        String text = "F I N A N C I A L    T R A C K E R";
 
-        // Ensure an odd total height for a clear center row
-        int height = totalHeight % 2 == 0 ? totalHeight + 1 : totalHeight;
 
-        // Nested loops to print the rectangle with text in the middle
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
-                    // Print '-' for the border
-                    System.out.print("\033[" + Constants.COLOR_RED + "m-\033[0m");
-                } else if (i == height / 2) {
-                    // Print the text in the middle row
-                    int textStart = (width - text.length()) / 2;
-                    int textEnd = textStart + text.length();
-                    if (j >= textStart && j < textEnd) {
-                        System.out.print("\033[" + Constants.COLOR_YELLOW + "m"+ text.charAt(j - textStart)+"\033[0m");
-                    } else {
-                        System.out.print(" ");
-                    }
-                } else {
-                    // Print space for the middle
-                    System.out.print(" ");
-                }
-            }
-            System.out.println(); // Move to the next line after printing each row
-        }
-        printNewLine();
-        printCurrentMonthName();
-        printNewLine();
-    }
 
 }
